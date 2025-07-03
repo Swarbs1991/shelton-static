@@ -1,0 +1,6 @@
+# .gitignore for shelton-static project
+# Add files and directories below to prevent them from being tracked by git.
+# Uncomment or add new patterns as needed.
+
+# Ignore the img folder and all its contents
+img/
