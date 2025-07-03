@@ -35,13 +35,55 @@ p {
   max-width: 100VW;
 }
 
+.parallax,
+.banner--wrapper.parallax {
+  position: relative;
+  z-index: 1;
+}
+
 .container.text {
-  width: 60%;
-  max-width: 600px;
+  width: 50%;
+  max-width: 100vw;
   line-height: 1.6;
-  background: #232323;
-  margin: 2rem auto;
+  background: #232323cc; /* semi-transparent for floating effect */
+  margin: -60rem auto 2rem auto;
   padding: 1.5rem 2rem;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35), 0 2px 12px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
 }
+
+.container.text.reviews {
+  margin-top: -10rem;
+}
+
+.container.text.reviews.full-width {
+  width: 100vw;
+  max-width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  background: #000;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 4rem 0;
+  z-index: 3;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .container.text {
+    width: 90%;
+    margin-top: -80px;
+  }
+  .container.text.reviews.full-width {
+    padding: 2rem 0;
+  }
+}
+
