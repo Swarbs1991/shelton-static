@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <title>Ricky Shelton - Singer</title>
   </head>
   <body>
@@ -35,19 +37,84 @@
 
     <div class="container text reviews full-width parallax">
       <h2>Testimonials and reviews</h2>
-      <p>
-        Ricky Shelton is a professional singer available for hire at parties, weddings, corporate events, and other special occasions. With a versatile repertoire and years of experience, Ricky brings energy and entertainment to any function. Book now to add a special musical touch to your celebration!
-      </p>
+      <div class="testimonial-slider">
+        <div>
+          <p>"Ricky made our wedding unforgettable! His voice is incredible and he got everyone dancing."</p>
+          <strong>- Sarah & Tom</strong>
+        </div>
+        <div>
+          <p>"Professional, talented, and so much fun. Highly recommended for any event!"</p>
+          <strong>- Corporate Event Organiser</strong>
+        </div>
+        <div>
+          <p>"The best singer we've ever hired. Our guests are still talking about the night!"</p>
+          <strong>- Birthday Party Host</strong>
+        </div>
+      </div>
     </div>
 
     <div class="parallax">
       <img class="banner-image" src="img/pexels-apasaric-2078071.jpg" alt="Banner" />
+      <p class="copright">&copy; 2025 Ricky Shelton</p>
     </div>
 
-    <!-- <div class="parallax">
-      <img class="banner-image" src="img/pexels-mark-angelo-sampan-738078-1587927.jpg" alt="Banner" />
-    </div> -->
+    <!-- New Songs Slider Section -->
+    <div class="songs-slider-section">
+      <h2>Featured Songs</h2>
+      <div class="songs-slider">
+        <div><div class="song-slide">Song Title 1</div></div>
+        <div><div class="song-slide">Song Title 2</div></div>
+        <div><div class="song-slide">Song Title 3</div></div>
+        <div><div class="song-slide">Song Title 4</div></div>
+        <div><div class="song-slide">Song Title 5</div></div>
+      </div>
+    </div>
 
-    <script src="site.js"></script>
+    <!-- Price Packages Section -->
+    <div class="packages-slider-section">
+      <h2>Price Packages</h2>
+      <div class="packages-slider">
+        <div>
+          <div class="package-slide">
+            <h3>Silver Package</h3>
+            <ul>
+              <li>1 hour live performance</li>
+              <li>Basic sound setup</li>
+              <li>1 special request song</li>
+            </ul>
+            <p class="price">£250</p>
+          </div>
+        </div>
+        <div>
+          <div class="package-slide">
+            <h3>Gold Package</h3>
+            <ul>
+              <li>2 hour live performance</li>
+              <li>Professional sound & lighting</li>
+              <li>3 special request songs</li>
+            </ul>
+            <p class="price">£400</p>
+          </div>
+        </div>
+        <div>
+          <div class="package-slide">
+            <h3>Platinum Package</h3>
+            <ul>
+              <li>3 hour live performance</li>
+              <li>Full sound & lighting</li>
+              <li>Unlimited requests</li>
+            </ul>
+            <p class="price">£600</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script src="site.js"></script>
+      <script src="slick.js"></script>
+    </footer>
   </body>
 </html>
