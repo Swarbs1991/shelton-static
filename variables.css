@@ -1,0 +1,7 @@
+body {
+    --transluscent-black: rgba(0, 0, 0, 0.8);
+    --transluscnet-white: rgba(255, 255, 255, 0.25);
+    --blue-purple-gradient: linear-gradient(135deg, #1976d2, #9c27b0);
+    --orange-purple-gradient: linear-gradient(135deg, #ff6a00, #9c27b0);
+    --rounded-corners: 0.75em;
+}
