@@ -1,5 +1,5 @@
 body {
-  background-color: #181818;
+  background-color: black;
   color: #f3f3f3;
   font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -28,6 +28,7 @@ h1 {
 
 h2 {
   color: white;
+  margin-top: 0;
   margin-bottom: 2rem;
   font-size: 2rem;
   letter-spacing: 1px;
@@ -64,7 +65,7 @@ p {
 
 .container.text.one {
   width: 60%;
-  margin: -65rem auto 2rem auto;
+  margin: -70rem auto 2rem auto;
 }
 
 .container.text.two {
@@ -77,6 +78,33 @@ p {
 .full-width {
   width: 100vw;
   max-width: 100vw;
+}
+
+/* Images slider */
+.gallery-slider-section,
+.songs-slider-section {
+  display: block;
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  background: var(--transluscent-black);
+  padding: 4rem 0 3rem 0;
+  text-align: center;
+  z-index: 999;
+}
+
+.gallery-slider-section {
+  margin-top: 5rem;
+}
+
+.gallery-slider img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  display: block;
 }
 
 .container.text.reviews {
@@ -143,14 +171,7 @@ p {
 
 /* Songs slider styles */
 .songs-slider-section {
-  display: block;
-  position: relative;
-  width: 100vw;
-  max-width: 100vw;
-  background: var(--transluscent-black);
-  padding: 4rem 0 3rem 0;
-  text-align: center;
-  z-index: 999;
+  margin-top: 20rem;
 }
 
 .songs-slider .slick-track {
@@ -297,7 +318,7 @@ p.copright {
   background: var(--transluscent-black);
   color: #f3f3f3;
   font-size: 1em;
-  margin: 1em;
+  margin: 0;
   padding-bottom: 1em;
   z-index: 999;
 }
@@ -426,4 +447,3 @@ p.copright {
     padding: 2rem 0;
   }
 }
-

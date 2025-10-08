@@ -46,6 +46,15 @@
       </p>
     </div>
 
+    <div class="gallery-slider-section">
+      <h2>Gallery</h2>
+      <div class="gallery-slider">
+        <div class="slick-slide"><img src="img/supplied/best-piano-shot.jpg" alt="Gallery Image 1" class="gallery-img"></div>
+        <div class="slick-slide"><img src="img/supplied/sparkling-bg_landscape.jpg" alt="Gallery Image 2" class="gallery-img"></div>
+        <div class="slick-slide"><img src="img/supplied/mic-in-hand_landscape.jpg" alt="Gallery Image 3" class="gallery-img"></div>
+      </div>
+    </div>
+
     <div class="container text reviews full-width parallax">
       <h2>Testimonials and reviews</h2>
       <div class="testimonial-slider">
@@ -146,7 +155,7 @@
       </div>
       <div class="contact">
         <h3>Booking and Enquiries Form</h3>
-        <form class="booking-form">
+        <form class="booking-form" action="recaptcha-verify.php" method="POST">
           <div class="booking-form-row">
             <div class="half-width">
               <label for="name">Name</label>
@@ -169,6 +178,7 @@
           </div>
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5"></textarea>
+          <div class="g-recaptcha" data-sitekey="6Le3LOMrAAAAAFgoAaAFJzG2lrFsewsBeFDhHyPp"></div>
           <button type="submit" class="send-btn">
             Send <i class="fa-solid fa-paper-plane"></i>
           </button>
@@ -182,6 +192,7 @@
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script src="site.js"></script>
       <script src="slick.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     </footer>
   </body>
 </html>

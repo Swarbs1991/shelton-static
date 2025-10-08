@@ -4,3 +4,6 @@
 
 # Ignore the img folder and all its contents
 img/
+
+#Ignore Google reCAPTCHA Verification
+recaptcha-verify.php
