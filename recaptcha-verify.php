@@ -87,7 +87,8 @@ $headers = "From: {$name} <{$email}>\r\nReply-To: {$email}\r\n";
 /* Send mail (may require server mail configured) */
 @mail($to, $subject, $body, $headers);
 
-/* On success, redirect to a thank-you page (create thank-you.html) */
-header('Location: thank-you.html');
+/* On success, just echo a success message */
+http_response_code(200);
+echo 'success';
 exit;
 ?>
