@@ -12,33 +12,25 @@
     e.preventDefault();
 
     if (typeof grecaptcha === 'undefined' || !grecaptcha.ready) {
-      // grecaptcha not loaded yet — fallback after short delay
-      setTimeout(() => {
-        if (typeof grecaptcha !== 'undefined' && grecaptcha.ready) {
-          executeAndSubmit();
-        } else {
-          alert('reCAPTCHA not available. Please try again in a moment.');
-        }
-      }, 500);
+      alert('reCAPTCHA not available. Please try again in a moment.');
       return;
     }
 
-    executeAndSubmit();
-
-    // Fallback timeout: if token not set within 5s, show message
-    setTimeout(function () {
-      if (!tokenInput.value) {
-        alert('reCAPTCHA timed out. Please try again.');
-      }
-    }, 5000);
-  });
-
-  function executeAndSubmit() {
     grecaptcha.ready(function () {
       grecaptcha.execute(SITE_KEY, { action: 'booking_form' }).then(function (token) {
         tokenInput.value = token;
         form.submit();
+      }).catch(function (err) {
+        alert('reCAPTCHA failed to generate a token. Please try again.');
+        console.error('reCAPTCHA error:', err);
       });
+
+      // Fallback timeout: if token not set within 5s, show message
+      setTimeout(function () {
+        if (!tokenInput.value) {
+          alert('reCAPTCHA timed out. Please try again.');
+        }
+      }, 5000);
     });
-  }
+  });
 })();
