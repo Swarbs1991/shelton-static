@@ -79,7 +79,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 /* Prepare email (adjust recipient as needed) */
-$to      = 'vraptor1991@hotmail.com';
+$to      = 'bookings@djrichierich.com';
 $subject = 'Booking request from website';
 $body    = "Name: {$name}\nEmail: {$email}\nEvent Type: {$eventType}\nDate: {$date}\n\nMessage:\n{$message}\n";
 $headers = "From: {$name} <{$email}>\r\nReply-To: {$email}\r\n";
