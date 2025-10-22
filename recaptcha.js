@@ -11,26 +11,22 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    if (typeof grecaptcha === 'undefined' || !grecaptcha.ready) {
-      alert('reCAPTCHA not available. Please try again in a moment.');
+    // Wait until grecaptcha is defined and ready
+    if (typeof grecaptcha === 'undefined') {
+      alert('reCAPTCHA is still loading. Please wait a moment and try again.');
       return;
     }
 
     grecaptcha.ready(function () {
-      grecaptcha.execute(SITE_KEY, { action: 'booking_form' }).then(function (token) {
-        tokenInput.value = token;
-        form.submit();
-      }).catch(function (err) {
-        alert('reCAPTCHA failed to generate a token. Please try again.');
-        console.error('reCAPTCHA error:', err);
-      });
-
-      // Fallback timeout: if token not set within 5s, show message
-      setTimeout(function () {
-        if (!tokenInput.value) {
-          alert('reCAPTCHA timed out. Please try again.');
-        }
-      }, 5000);
+      grecaptcha.execute(SITE_KEY, { action: 'booking_form' })
+        .then(function (token) {
+          tokenInput.value = token;
+          form.submit();
+        })
+        .catch(function (err) {
+          alert('reCAPTCHA failed to generate a token. Please try again.');
+          console.error('reCAPTCHA error:', err);
+        });
     });
   });
 })();
