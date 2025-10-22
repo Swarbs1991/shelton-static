@@ -5,8 +5,9 @@
 # Ignore the img folder and all its contents
 img/
 
-#Ignore Google reCAPTCHA Verification
-recaptcha-verify.php
+# Ignore Google reCAPTCHA Verification
+# This can be included now the secret is not in the file
+#recaptcha-verify.php
 
 # Ignore all .txt files
 *.txt
