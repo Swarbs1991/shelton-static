@@ -444,6 +444,16 @@ p.copright {
   vertical-align: middle;
 }
 
+@media (max-width: 900px) {
+  .container.text {
+    width: 90%;
+    margin-top: -80px;
+  }
+  .container.text.reviews.full-width {
+    padding: 2rem 0;
+  }
+}
+
 @media (max-width: 700px) {
   .booking-form-row {
     flex-direction: column;
@@ -454,12 +464,47 @@ p.copright {
   }
 }
 
-@media (max-width: 900px) {
-  .container.text {
-    width: 90%;
-    margin-top: -80px;
+@media (max-width: 430px) {
+  h1 {
+    font-size: 1.5rem;
   }
-  .container.text.reviews.full-width {
-    padding: 2rem 0;
+  .container.text.one {
+    width: 80%;
+    margin-top: -10rem;
+  }
+  .container.text.reviews {
+    margin-top: -40rem;
+  }
+  .songs-slider-section {
+    margin-top: 85rem;
+  }
+  .songs-slider-section .slick-dots {
+    bottom: unset;
+  }
+  .contact {
+    width: auto;
+    max-width: 80%;
+  }
+
+  /* Ensure gallery and packages dots are visible on small screens */
+  .gallery-slider .slick-dots,
+  .packages-slider .slick-dots {
+    display: block !important;
+    position: relative;
+    bottom: 0;
+    margin: 1.25rem auto 0 auto;
+    text-align: center;
+  }
+
+  .gallery-slider .slick-dots li button:before,
+  .packages-slider .slick-dots li button:before {
+    color: white;
+    opacity: 0.9;
+    font-size: 12px;
+  }
+  .gallery-slider .slick-dots li.slick-active button:before,
+  .packages-slider .slick-dots li.slick-active button:before {
+    color: var(--color-highcontrast);
+    opacity: 1;
   }
 }
