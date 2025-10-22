@@ -2,17 +2,7 @@
 (function () {
   'use strict';
 
-  // Load site key from server file. The server must expose this file over HTTP (e.g. via your server config).
-  let SITE_KEY = null;
-  (function fetchSiteKey() {
-    fetch('/etc/shelton/G-reCAPTCHA-key', { cache: 'no-store' })
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch reCAPTCHA key: ' + res.status);
-        return res.text();
-      })
-      .then(text => { SITE_KEY = text.trim(); })
-      .catch(err => { console.error('Could not load reCAPTCHA site key:', err); });
-  })();
+  const SITE_KEY = '6LcSnvMrAAAAALvi54ybABIW1DQbC5opqhfeCeO3';
   const form = document.querySelector('.booking-form');
   const tokenInput = document.getElementById('g-recaptcha-response');
 
