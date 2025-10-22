@@ -7,3 +7,6 @@ img/
 
 #Ignore Google reCAPTCHA Verification
 recaptcha-verify.php
+
+# Ignore all .txt files
+*.txt
