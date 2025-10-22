@@ -295,11 +295,12 @@
           </div>
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5"></textarea>
-          <div class="g-recaptcha" data-sitekey="6LcSnvMrAAAAALvi54ybABIW1DQbC5opqhfeCeO3"></div>
-          <button type="submit" class="send-btn">
-            Send <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
+          <!-- reCAPTCHA v3: hidden token field -->
+          <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="">
+           <button type="submit" class="send-btn">
+             Send <i class="fa-solid fa-paper-plane"></i>
+           </button>
+         </form>
       </div>
     </div>
 
@@ -309,7 +310,9 @@
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script src="site.js"></script>
       <script src="slick.js"></script>
-      <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+      <!-- reCAPTCHA v3 script -->
+      <script src="https://www.google.com/recaptcha/api.js?render=6LcSnvMrAAAAALvi54ybABIW1DQbC5opqhfeCeO3" async defer></script>
+      <script src="recaptcha.js"></script>
     </footer>
   </body>
 </html>
