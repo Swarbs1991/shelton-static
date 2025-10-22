@@ -1,5 +1,6 @@
 // reCAPTCHA v3 form token fetch & submit handler
-(function () {
+
+document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   const SITE_KEY = '6LcSnvMrAAAAALvi54ybABIW1DQbC5opqhfeCeO3';
@@ -11,7 +12,6 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Wait until grecaptcha is defined and ready
     if (typeof grecaptcha === 'undefined') {
       alert('reCAPTCHA is still loading. Please wait a moment and try again.');
       return;
@@ -29,4 +29,4 @@
         });
     });
   });
-})();
+});
