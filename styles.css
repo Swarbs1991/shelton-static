@@ -94,7 +94,7 @@ p {
 }
 
 .gallery-slider-section {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 .gallery-slider img {
@@ -191,8 +191,10 @@ p {
   min-width: 200px;
   min-height: 100px;
   display: flex;
+  flex-direction: column; /* stack artist above title */
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  gap: 0.4rem;
 }
 
 .songs-slider .slick-center .song-slide {
@@ -252,6 +254,20 @@ p {
   color: var(--color-highcontrast);
   margin-bottom: 1rem;
   font-size: 1.3rem;
+}
+
+/* Reuse package h3 styles for song artist headings */
+.song-slide .song-artist {
+  color: var(--color-highcontrast);
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* song title */
+.song-slide .song-title {
+  font-size: 1.15rem;
+  color: #ffffff;
 }
 
 .packages-slider .package-slide ul {
