@@ -303,9 +303,9 @@
           </div>
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5"></textarea>
-          <!-- reCAPTCHA v3: hidden token field -->
-          <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="">
-           <button type="submit" class="send-btn">
+          <!-- reCAPTCHA v2: visible checkbox widget -->
+          <div class="g-recaptcha" data-sitekey="6LdNrQQsAAAAACeLX6fxJbewNwjyU4Vd6jGGZQ24"></div>
+          <button type="submit" class="send-btn">
              <span class="btn-text">Send</span>
              <i class="fa-solid fa-paper-plane btn-icon"></i>
              <img src="img/PacMan-loading.gif" class="btn-loading" style="display:none;width:20px;height:20px;vertical-align:middle;" alt="Loading...">
@@ -320,9 +320,9 @@
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script src="site.js"></script>
       <script src="slick.js"></script>
-  <!-- reCAPTCHA v3 script -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6LcSnvMrAAAAALvi54ybABIW1DQbC5opqhfeCeO3"></script>
-  <script src="recaptcha-v3.js"></script>
+  <!-- reCAPTCHA v2 script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="recaptcha.js"></script>
     </footer>
   </body>
 </html>
