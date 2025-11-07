@@ -11,3 +11,6 @@ img/
 
 # Ignore all .txt files
 *.txt
+
+# Ignore Git group permissions readme
+GIT_SHARED_REPO_TRANSCRIPT.md
